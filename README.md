@@ -1,0 +1,1 @@
+> This is an educational repository based on the YouTube channel https://www.youtube.com/@jswithali, which focuses on teaching JavaScript.
