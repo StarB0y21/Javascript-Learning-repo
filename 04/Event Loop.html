@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04</title>
+    <script>
+        // Evant Loop
+        const foo = () => console.log("first");
+        const bar = () => setTimeout(() => console.log("second"), 500);
+        const baz = () => console.log("third");
+
+        bar();
+        foo();
+        baz();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
