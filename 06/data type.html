@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06</title>
+    <script>
+        //number:
+
+        // let number = 10;
+        // let number = 10.548;
+        let number = -10.548;
+        console.log(number);
+
+        // let number1=10000;
+        // let number1=1e4;
+        let number1 = 1e-4;
+        console.log(number1);
+
+        let number2 = 12.546;
+        console.log(number2.toFixed());
+        console.log(number2.toFixed(1));
+        console.log(number2.toFixed(2));
+        console.log(number2.toFixed(3));
+        console.log(number2.toFixed(4));
+        console.log(number2.toFixed(5));
+
+        console.log(Number.MAX_VALUE);
+        console.log(Number.MIN_VALUE);
+
+        console.log(2 / 0);
+        console.log('a' / 2);
+
+        //string:
+
+        let info = "My name is Sina !";
+        let language = "javascript";
+        console.log(info);
+        console.log(info.length);
+        console.log(info.charAt(0));
+        console.log(info.charAt(1));
+        console.log(info.charAt(2));
+        console.log(info[0]);
+        console.log(info[1]);
+
+        console.log(info.charAt(17));
+        console.log(info.charAt(-5));
+        console.log(info[17]);
+        console.log(info.at(1));
+        console.log(info.at(-1));
+        console.log(info.at(-5));
+
+        console.log(info.indexOf('is'));
+        console.log(info.indexOf('xx'));
+        console.log(info.indexOf('i'));
+        console.log(info.lastIndexOf('i'));
+
+        console.log(info.search('Sina'));
+
+        console.log(info.includes('Sina'));
+        console.log(info.includes('Reza'));
+
+        console.log(info.substring(0, 10));
+        console.log(info.substring(11, 14));
+        console.log(info.slice(3));
+        console.log(info.slice(3, 7));
+        console.log(info.slice(-1));
+        console.log(info.slice(-5, -2));
+
+        console.log(info.startsWith("M"));
+        console.log(info.startsWith("m"));
+        console.log(info.endsWith("!"));
+
+        let message = "   hi   ";
+        console.log(message, message.length);
+        console.log(message.trim());
+        console.log(message.trimStart());
+        console.log(message.trimEnd());
+
+        let love = "I love";
+        console.log(love.padEnd(9));
+        console.log(love.padEnd(9, "."));
+        console.log(love.padStart(9, "."));
+        console.log(love.padStart(9, "ssss"));
+        console.log(love.padStart(9, "sssssafsdgvszefsqr"));
+
+        console.log(info.replace('Sina', 'Reza'));
+        console.log(language.replace('java', 'type'));
+        console.log(language.replace('a', ''));
+        console.log(language.replace('a', 'x'));
+        console.log(language.replaceAll('a', 'x'));
+
+        console.log(language.repeat(3));
+
+        console.log(love + " " + language + " !");
+        console.log(`${love} ${language} !`);
+        console.log(love.concat(' ', language, ' !'));
+
+        //boolean:
+
+        let variable1 = false;
+        let variable2 = true;
+
+        Boolean();
+        // Number();
+        // String();
+        console.log(Boolean(0));
+        console.log(Boolean(20));
+        console.log(Boolean(-20));
+        console.log(Boolean(''));
+        console.log(Boolean('ali'));
+        console.log(Boolean('       '));
+
+        let firstname1 = Symbol('first name');
+        let firstname2 = Symbol('first name');
+        console.log(firstname1 === firstname2);
+
+        //undefined:
+
+        // let u;
+        let u = undefined;
+        console.log(u);
+
+        let name = "ali";
+        // let name2 = "10";
+        let name2 = "10a";
+        let sge = 30;
+        // let isStudent = true;
+        let isStudent = false;
+        let firstname = Symbol('first name');
+
+        console.log(typeof name);
+        console.log(typeof age);
+        console.log(typeof isStudent);
+        console.log(typeof firstname);
+        console.log(typeof u);
+        console.log(typeof "");
+        console.log(typeof 10);
+        console.log(typeof Infinity);
+        console.log(typeof NaN);
+        console.log(typeof {});
+        console.log(typeof []);
+        console.log(typeof null);
+        console.log(typeof function(){});
+
+        console.log(Number(isStudent));
+        console.log(Number(name));
+        console.log(Number(name2));
+
+        console.log(Boolean(age));
+
+        console.log(String(age));
+        console.log(String(isStudent));
+        console.log(String(u));
+        console.log(String(firstname));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
