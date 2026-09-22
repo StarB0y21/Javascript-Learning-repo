@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07</title>
+    <script>
+        //array:
+
+        // const array = ["a", 12, true];
+        // console.log(array[0]);
+        // array[0] = "b";
+        // console.log(array);
+
+        // const fixedPlayer = ["Hallabd", "Rodri", "KDB"];
+        // console.log(fixedPlayer[1]);
+        // console.log(fixedPlayer[5]);
+        // console.log(fixedPlayer[-2]);
+        // fixedPlayer[3] = "Silva";
+        // fixedPlayer[7] = "Ederson";
+        // console.log(fixedPlayer[6]);
+        // console.log(fixedPlayer.length);
+        // console.log(Array.isArray(fixedPlayer));
+        // console.log(Array.isArray(fixedPlayer[0]));
+
+        // const benchPlayer = [];
+        // benchPlayer[0] = "Lwis";
+        // benchPlayer[1] = "Doku";
+        // console.log(benchPlayer);
+
+        // fixedPlayer.shift();
+        // console.log(fixedPlayer.shift());
+        // console.log(fixedPlayer);
+
+        // fixedPlayer.pop();
+        // console.log(fixedPlayer.pop());
+        // console.log(fixedPlayer);
+
+        // fixedPlayer.unshift("stons");
+        // console.log(fixedPlayer);
+        // fixedPlayer.push("philips");
+        // console.log(fixedPlayer);
+
+        // fixedPlayer.concat(benchPlayer);
+        // console.log(fixedPlayer.slice(1,2)); //immutable
+        // console.log(fixedPlayer.splice(1,2)); //mutable
+        // console.log(fixedPlayer.splice(1, 2, "x")); //mutable
+        // console.log(fixedPlayer.reverse());
+
+        // const numbers =[1,2,3,[4,5],[6,[7,8]]];
+        // console.log(numbers.flat());
+        // console.log(numbers.flat(3));
+        // console.log(numbers.flat().flat());
+
+        //object:
+
+        // const person = {
+        //     name: "Kamyar",
+        //     family: "Yarfar",
+        //     age: 30,
+        //     fender: "Male",
+        //     isStudent: false,
+        //     hobbies: ["swimming", "playing football", "reading novals"],
+        //     walk: function () {
+        //         //implementation
+        //     }
+        // };
+
+        // const car = {
+        //     name: "R8",
+        //     brand: "Audi",
+        //     speed: 300
+        // };
+
+        // const concatObject = Object.assign(person,car); //mutable
+
+        // console.log(concatObject);
+
+        // console.log(person);
+        // console.log(car);
+
+        // const concatObject = { person, car };
+        // const concatObject = { ...person, ...car };
+        // console.log(concatObject);
+        // console.log(person);
+        // console.log(car);
+
+        // console.log(person.age);
+        // console.log(person["age"]);
+
+        // person.salary = 3000;
+        // console.log(person);
+
+        // console.log(person.hasOwnProperty("salary"));
+
+        // console.log(Object.entries(person));
+        // console.log(Object.keys(person));
+        // console.log(Object.values(person));
+
+        // for (let key in person) {
+        //     console.log(key, person[key]);
+        // }
+
+        // for (let item of Object.entries(person)) {
+        //     console.log(`key=${item[0]} value=${item[1]}`);
+        // }
+
+        const obj = {
+            prop: 42,
+            prop2: 56
+        };
+
+        // const obj1 = {
+        //     prop: 42
+        // };
+
+        // console.log(obj === obj1);
+
+        // obj.prop = 50;
+        // console.log(obj);
+
+        Object.freeze(obj);
+        obj.prop = 50;
+        console.log(obj);
+        
+        delete obj.prop2;
+        console.log(obj);
+        
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
