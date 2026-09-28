@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09</title>
+    <script>
+        //logical
+
+        let a = true;
+        let b = false;
+
+        //Not operator
+        console.log(!b);
+        console.log(!0);
+        console.log(!20);
+        console.log(!"");
+        console.log(!"ok");
+        console.log(!undefined);
+        console.log(!null);
+        console.log(!NaN);
+        console.log(!!10);
+
+        //And operator
+        console.log(a && b);
+        console.log(b && a);
+        console.log(a && a);
+        console.log(b && b);
+
+        //Or prerator
+        console.log(a || b);
+        console.log(b || a);
+        console.log(a || a);
+        console.log(b || b);
+
+        // const x1 = null || "ali";
+        // const x1 = "js" || "ali";
+        // const x1 = 0 || "ali";
+        // const x1 = null || null;
+        // const x1 = null || undefined;
+        const x1 = undefined || null;
+        console.log(x1);
+
+        //Nullish operator
+        // const x2 = "ali" ?? "js";
+        // const x2 = null ?? "js";
+        // const x2 = 0 ?? "js";
+        // const x2 = undefined ?? "js";
+        const x2 = "undefined" ?? "js";
+        console.log(x2);
+
+        //Ternary operators
+        //logic ? "if logic is true" : "else"
+        const x3 = true ? "ali" : "js";
+        console.log(x);
+
+        let age = 20;
+        const checkAdult = age > 50 ? "old" : "young";
+        console.log(checkAdult);
+
+        //assignment
+
+        let variable = 50;
+        let a1 = 50;
+        let b1 = 30;
+        a1 = b1;
+        console.log(a);
+        console.log(a1 *= b1); //a = a + b
+        console.log(a1 += b1); //a = a * b
+        console.log(a1 -= b1); //a = a - b
+        console.log(a1 /= b1); //a = a / b
+
+        //arithmetic
+        let a2 = 2;
+        let b2 = 8;
+        console.log(a2 + b2);
+        console.log(a2 - b2);
+        console.log(a2 * b2);
+        console.log(a2 / b2);
+        console.log(a2 % b2);
+        console.log(a2 ** b2);
+        console.log(++a2);
+        console.log(--a2);
+        console.log(a2++);
+        console.log(a2--);
+
+        // const c = a2 + b2 * 3; //30 - 14
+        const c = (a2 + b2) * 3; //30 - 14
+        console.log(c);
+
+        //comparison
+        let a3 = 10;
+        let b3 = 5;
+        let c2 = "10";
+        conso.log(a3 < b3);
+        conso.log(a3 > b3);
+        conso.log(a3 <= b3);
+        conso.log(a3 >= b3);
+        conso.log(a3 == b3);
+        conso.log(a3 === b3);
+        conso.log(a3 !== b3);
+        conso.log(a3 != b3);
+
+        conso.log(a3 == c2);
+        conso.log(a3 === c2);
+
+        console(true > 1);
+        console(true >= 1);
+        console(false > 1);
+
+        // const x4 = false > true;
+        // const x4 = null == undefined;
+        // const x4 = null === undefined;
+        const x4 = NaN === NaN;
+        console.log(x4);
+        console.log(typeof null);
+        console.log(typeof undefined);
+        console.log(typeof NaN);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
