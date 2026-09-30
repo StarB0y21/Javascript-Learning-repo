@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11</title>
+    <script>
+        //function declaration
+        function functionName(name, age) {
+            return params;
+        }
+
+        const result = functionName("ali", 12);
+        console.log(result);
+
+        function sum(a, b) {
+            return a + b;
+        }
+
+        console.log(sum("hello", " world"));
+        console.log(sum(10, 20));
+
+        // function expression
+        const sum2 = function () {
+            return "expression";
+        };
+        sum2();
+
+        const sum3 = () => {
+            return "expression";
+        };
+        sum3();
+
+        const sum4 = () => "expression";
+        sum4();
+
+        function sum5(a = 10, b = 0) {
+            return a + b;
+        }
+        sum5(10);
+
+        function sum6(a, b, c) {
+            return a + b + c;
+        }
+        sum6(5, 10, 20);
+
+        function sum6(obj) {
+            return obj.a + obj.b + obj.c;
+        }
+        sum6({ a: 5, b: 10, c: 15 });
+
+        function greetiongs(...names) {
+            console.log(names);
+        }
+
+        greetiongs("ali");
+        greetiongs("ali", "aria", "hamid");
+
+        function greetiongs1(user1, user2, user3) {
+            console.log('welcome ' + user1 + ' and ' + user2 + ' and ' + user3);
+        }
+
+        const names = ["ali", "reza", "hamid"]
+        greetiongs1("sara", ...names);
+
+        function test(a, b) {
+            console.log(arguments);
+            console.log(Array.from(arguments));
+        }
+
+        test("a", 12);
+
+        // function recursive(){
+        //     if(condition){
+        //         // logic : break the calling recursive function
+        //     }else{
+        //         recursive();
+        //     }
+        // }
+
+        function countDown(number) {
+            console.log(number);
+            let nextNumber = number - 1;
+            if (nextNumber >= 0) {
+                countDown(nextNumber);
+            }
+        }
+
+        countDown(10);
+
+        function sum7(number) {
+            if (number <= 1) return number;
+            return number + sum(number - 1);
+        }
+
+        sum7(5);
+    </script>
+</head>
+
+<body>
+    <p>open console</p>
+</body>
+
+</html>
