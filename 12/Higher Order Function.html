@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12</title>
+    <script>
+        //higher order fucntion HOF
+        //a function that accepts and return another function
+
+        // function f(){
+        //     return "";
+        // }
+
+        // function HOF(f){
+        //     // add power to f function
+        //     f();
+        // }
+
+        const numbers = [1, 5, 7, 9, 8, 12];
+
+        function isOdd(num) {
+            return num % 2 !== 0;
+        }
+
+        function isEven(num) {
+            return num % 2 == 0;
+        }
+
+        function gretherThanFive(num) {
+            return num > 5;
+        }
+
+        function seperation(arr, callback) {
+            const array = [];
+            for (let i = 0; i < arr.length; i++) {
+                callback(arr[i]) ? array.push(arr[i]) : null;
+            }
+            return array;
+        }
+
+        seperation(numbers, isOdd);
+        seperation(numbers, isEven);
+
+        const r = [1, 2, 3];
+
+        function calcArea(radiuses) {
+            const output = [];
+            for (let i = 0; i < radiuses.length; i++) {
+                output.push(Math.PI * radiuses[i] * radiuses[i]);
+            }
+            return output;
+        }
+
+        function calcDiameter(radiuses) {
+            const output = [];
+            for (let i = 0; i < radiuses.length; i++) {
+                output.push(2 * radiuses[i]);
+            }
+            return output;
+        }
+
+        calcArea(r);
+        calcDiameter(r);
+
+        const area = function (radius) {
+            return Math.PI * radius * radius;
+        }
+
+        const diameter = function (radius) {
+            return 2 * radius;
+        }
+
+        const circumeference = function (radius) {
+            return 2 * Math.PI * radius;
+        }
+
+        function calcCircle(radiuses, callBack) {
+            const output = [];
+            for (let i = 0; i < radiuses.length; i++) {
+                output.push(callBack(radiuses[i]));
+            }
+            return output;
+        }
+
+        calcCircle(r, area);
+        calcCircle(r, diameter);
+        calcCircle(r, circumeference);
+    </script>
+</head>
+
+<body>
+    <p>open console</p>
+</body>
+
+</html>
