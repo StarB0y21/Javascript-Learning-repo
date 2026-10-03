@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13</title>
+    <script>
+        // var a = "123";
+        // function test() {
+        //     let a = "a";
+        //     return a;
+        // }
+
+        // console.log(test());
+
+        // function first() {
+        //     console.log("js with ali");
+        // }
+
+        // function second() {
+        //     first();
+        // }
+
+        // function third() {
+        //     second();
+        // }
+
+        // third();
+        // console.log();
+
+        //global scope:
+        // let a = 2;
+        // var b = 3;
+        // const d = 6;
+        // function test() {
+        //     // function scope:
+        //     let a = 2;
+        //     var b = 3;
+        //     if (true) {
+        //         //block scope:
+        //         let c = 20;
+        //     }
+        // }
+
+        // // let a = 10;
+        // var a = 10;
+        // function f() {
+        //     // a = "hello";
+        //     // let a = "hello";
+        //     var a = "hello";
+        // }
+        // console.log(a);
+        // f();
+        // console.log(a);
+
+        // let a = "hello";
+        // function greet() {
+        //     let b = "world";
+        //     console.log(a + ' ' + b);
+        //     if (b == "world") {
+        //         // let c = "!!!";
+        //         var c = "!!!";
+        //         // console.log(a + ' ' + b + ' ' + c);
+        //     }
+        //     console.log(a + ' ' + b + ' ' + c);
+        // }
+        // greet();
+
+        // function loop() {
+        //     for (let i = 0; i < 5; i++) {
+        //         console.log("inside", i);
+        //     }
+        //     console.log("outside", i);
+        // }
+
+        // loop();
+
+        //scope chain
+
+        var x = "x";
+        function first() {
+            var a = "a";
+            console.log(a);
+            console.log(x);
+            return function second() {
+                var b = "b";
+                console.log(b);
+                console.log(a);
+                console.log(x);
+                
+                console.log(c);
+                return function third() {
+                    var c = "c";
+                    console.log(c);
+                    console.log(b);
+                    console.log(a);
+                    console.log(x);
+                    return "js with ali";
+                };
+            };
+        }
+
+        // first();
+        // first()();
+        first()()();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
