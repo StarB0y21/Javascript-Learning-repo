@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14</title>
+    <script>
+        console.log(this);
+        console.log(window);
+        console.log(globalThis);
+        console.log();
+
+        //'this' is the object that the function is a property of
+
+        // const obj = {
+        //     name: "ali",
+        //     brand: "js with ali",
+        //     getInfo: function () {
+        //         // console.log(obj.name + " is owner of" + obj.brand);
+        //         console.log(this.name + " is owner of" + this.brand);
+        //     }
+        // }
+
+        // obj.getInfo();
+
+        // function getInfo() {
+        //     console.log(this.name + "!");
+        // }
+
+        // const obj1 = {
+        //     name: "ali",
+        //     getInfo: getInfo
+        // }
+
+        // const obj2 = {
+        //     name: "reza",
+        //     getInfo: getInfo
+        // }
+
+        // obj1.getInfo();
+
+        // function a() {
+        //     console.log("a", this);
+        //     function b() {
+        //         console.log("b", this);
+        //         const c = {
+        //             hi: function () {
+        //                 console.log("c", this);
+        //             }
+        //         }
+        //         c.hi();
+        //     }
+        //     b();
+        // }
+        // a();
+
+        // const obj = {
+        //     name: "ali",
+        //     getInfo() {
+        //         console.log("a", this);
+        //         var getInfo2 = function () {
+        //             console.log("b", this);
+        //         }
+        //         getInfo2();
+        //     }
+        // }
+        // obj.getInfo();
+
+        const obj = {
+            name: "ali",
+            getInfo() {
+                console.log("a", this);
+                var getInfo2 = () => {
+                    console.log("b", this);
+                }
+                getInfo2();
+            }
+        }
+        obj.getInfo();
+    </script>
+</head>
+
+<body>
+    <p>open console</p>
+</body>
+
+</html>
