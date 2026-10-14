@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17</title>
+    <script>
+        class ClassName1 {
+            // attrs
+            // method
+            // constructor(params)
+        }
+
+        const obj = new ClassName1();
+
+        const ClassName2 = class {
+            // attrs
+            // method
+            // constructor(params)
+        }
+
+        // class Vehicle {
+        //     // model="BMW";
+        //     model;
+        //     brand;
+        //     year;
+        //     constructor(model, brand, year) {
+        //         this.model = model;
+        //         this.brand = brand;
+        //         this.year = year;
+        //     }
+        //     getType() {
+        //         return this.year < 1990 ? "old vehicle" : "new vehicle";
+        //     }
+        //     drive() {
+        //         console.log("driving...");
+        //     }
+        //     //...
+
+        //     // other methods
+        // }
+
+        // const vehicle = new Vehicle("Z4", "BMW", 2022);
+        // console.log(vehicle.brand);
+        // console.log(vehicle.getType());
+        // console.log(vehicle.drive());
+
+        // class Parent {
+        //     nameName;
+        //     getParentInfo()
+        // }
+
+        // class Child extends Parent {
+        //     childNmae;
+        //     getChildInfo()
+        // }
+
+        // const parent =new Parent();
+        // const child =new Child();
+        // child.getParentInfo();
+
+        // class Vehicle {
+        //     model;
+        //     brand;
+        //     year;
+        //     constructor(model, brand, year) {
+        //         this.model = model;
+        //         this.brand = brand;
+        //         this.year = year;
+        //     }
+        //     getType() {
+        //         return this.year < 1990 ? "old vehicle" : "new vehicle";
+        //     }
+        // }
+
+        // const user = "ADMIN";
+        // const user = "USER";
+
+        // class Vehicle {
+        //     model;
+        //     brand;
+        //     year;
+        //     #price; //ES2022
+        //     //access modifier ( public - provate - protected )
+        //     // constructor(model, brand, year) {
+        //     //     this.model = model;
+        //     //     this.brand = brand;
+        //     //     this.year = year;
+        //     // }
+        //     getType() {
+        //         return this.year < 1990 ? "old vehicle" : "new vehicle";
+        //     }
+
+        //     changePrice(value) {
+        //         if (user == "ADMIN") {
+        //             this.price += value;
+        //             return "successfully changed";
+        //         } else {
+        //             return "you don't access to change price";
+        //         }
+        //     }
+        // }
+
+        // const v = new Vehicle();
+        // console.log(v.changePrice(500));
+
+        // class Car extends Vehicle {
+        //     fuel;
+        //     constructor(model, brand, year, fuel) {
+        //         super();
+        //         // super(model);
+        //         this.fuel = fuel;
+        //     }
+        //     drive() {
+        //         console.log("driving...");
+        //     }
+        // }
+
+        // class MotorCycle extends Vehicle {
+        //     weight;
+        //     // constructor(model, brand, year, weight) {
+        //     //     super();
+        //     //     this.weight = weight;
+        //     // }
+        //     bike() {
+        //         console.log("biking...");
+        //     }
+        // }
+
+        // const car = new Car("Z4", "BMW", 2020, 10);
+        // console.log(car.model);
+        // console.log(car.fuel);
+        // console.log(car.year);
+        // console.log(car.brand);
+        // const motor = new MotorCycle("Beat", "Honda", 2015);
+
+        // class Car {
+        //     changeGear() {
+        //         console.log("changing...");
+        //     }
+        // }
+        // class AutomaticCar extends Car {
+        //     changeGear() {
+        //         console.log("changing automatic...");
+        //     }
+        // }
+        // class ManualCar extends Car {
+        //     changeGear() {
+        //         console.log("changing manually...");
+        //     }
+        // }
+
+        // const c = new Car();
+        // c.changeGear();
+
+        // const ac = new AutomaticCar();
+        // ac.changeGear();
+
+        // const mc = new ManualCar();
+        // mc.changeGear();
+
+        // class Pizza {
+        //     // don't worry about these items
+        //     prepareMaterials() {
+        //         console.log("prepare Materials...");
+        //     }
+        //     MakingBread() {
+        //         console.log("Making Bread...");
+        //     }
+        //     roastingMeat() {
+        //         console.log("reastiong Meat...");
+        //     }
+        //     choppingMushroom() {
+        //         console.log("chopping Mushroom...");
+        //     }
+
+        //     //just this
+        //     orderPizza() {
+        //         console.log("ordering Pizza...");
+        //     }
+        // }
+
+        class Car {
+            model = "Z4";
+            static speed = 250;
+            // static getInfo() {
+            getInfo() {
+                //some shit
+                console.log(`speed of ${this.model} is ${this.speed}`);
+            }
+        }
+
+        // Car.speed;
+        // Car.getInfo();
+        const c = new Car();
+        c.getInfo();
+
+        // const date = new Date();
+
+        // get current date time
+        console.log(Date.now());
+    </script>
+</head>
+
+<body>
+    <p>open console</p>
+</body>
+
+</html>
