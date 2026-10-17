@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18</title>
+    <script>
+        const obj = {
+            name: "ali",
+            brand: "jswithali"
+        }
+
+        console.log(obj.name);
+        console.log(obj.hasOwnProperty('name'));
+        console.log(obj.hasOwnProperty('test'));
+
+        const a = "test";
+        console.log(a.__proto__);
+        console.log(a.__proto__.__proto__);
+
+        const b = 100;
+        console.log(b);
+        console.log(b.hasOwnProperty('w'));
+
+        function f1() { }
+        console.log(f1);
+        console.log(f1.__proto__);
+        console.log(f1.__proto__.__proto__);
+
+        const plain = {
+            name: "F14",
+            fire: true,
+            speed() {
+                return 3000;
+            },
+            reaction() {
+                return `${this.name} can reaction on air`;
+            }
+        }
+
+        const car = {
+            name: "benz",
+            speed() {
+                return 250;
+            }
+        }
+
+        console.log(car.name);
+        console.log(car.hasOwnProperty('name'));
+
+        console.log(car.reaction);
+        car.__proto__ = plain;
+        console.log(car.reaction);
+
+        const cycle = Object.create(plain);
+        cycle.name = "yamaha";
+        console.log(cycle.reaction());
+
+        console.log(cycle.hasOwnProperty('name'));
+        console.log(cycle.hasOwnProperty('fire'));
+
+        console.log(cycle.isPrototypeOf(plain));
+        console.log(plain.isPrototypeOf(cycle));
+
+        function Person() {
+            this.name = "ali";
+            this.brand = "jswithali"
+        }
+
+        const p1 = new Person();
+        console.log(p1);
+
+        Person.prototype.age = 30;
+        const p2 = new Person();
+        console.log(p2);
+
+        console.log(new Date());
+        console.log(new Date('1990-10-10').getFullYear());
+        // console.log(new Date('1990-10-10').lastYear()); //error
+
+        Date.prototype.lastYear = function () {
+            return this.getFullYear() - 1;
+        }
+        console.log(new Date('1990-10-10').lastYear());
+
+        const array = [1, 2, 3];
+        const array2 = ['a', 'b', 'c'];
+        array.map(item => {
+            return item;
+        });
+
+        Array.prototype.map = function () {
+            let arr = [];
+            for (let i = 0; i < this.length; i++) {
+                arr.push(this[i] + '*');
+            }
+            return arr
+        }
+
+        array.map(item => {
+            return item;
+        });
+
+        array2.map(item => {
+            return item;
+        });
+
+    </script>
+</head>
+
+<body>
+    <p>open console</p>
+</body>
+
+</html>
