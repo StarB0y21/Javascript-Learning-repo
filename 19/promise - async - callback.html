@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>19</title>
+    <script>
+        // function a(cb) {
+        //     console.log("function a");
+        //     cb();
+        // }
+
+        // function b() {
+        //     console.log("function b");
+        // }
+
+        // a(b);
+
+        // setTimeout(() => {
+        //     console.log("settimeout");
+        // }, 2000);
+
+        // const p = new Promise((resolve, reject) => {
+        //     if (true) resolve("working");
+        //     // if (false) resolve("working");
+        //     reject("reject");
+        // });
+
+        // console.log(p);
+
+        // p.then((result) => {
+        //     console.log(`${result} !`);
+        //     // throw new Error;
+        //     // throw new Error("oops");
+        //     return result;
+        // }).then(result2 => {
+        //     console.log(`${result2} ?`);
+        // }).catch(error => {
+        //     console.log(error);
+        // }).finally(() => {
+        //     console.log("f");
+        // });
+
+        //API / server -> client / server <- client
+        // fetch('https://jsonplaceholder.typicode.com/users/1')
+        //     .then(response => response.json())
+        //     .then(json => console.log(json))
+        //     .catch(e => {
+        //         console.log(e);
+        //     })
+        //     .finally(() => {
+        //         console.log("fetched!!!");
+        //     });
+
+        // const p1 = new Promise((resolve, reject) => {
+        //     setTimeout(resolve, 1000, "p1 function")
+        // });
+
+        // const p2 = new Promise((resolve, reject) => {
+        //     // throw new Error
+        //     setTimeout(resolve, 3000, "p2 function")
+        // });
+
+        // const p3 = new Promise((resolve, reject) => {
+        //     setTimeout(resolve, 5000, "p3 function")
+        // });
+
+        // Promise.all([p1, p2, p3]).then(result => {
+        //     console.log(result);
+        // }).catch(e => console.log(e));
+        // Promise.allSettled([p1, p2, p3]).then(result => {
+        //     console.log(result);
+        // }).catch(e => console.log(e));
+        // Promise.any([p1, p2, p3]).then(result => {
+        //     console.log(result);
+        // }).catch(e => console.log(e));
+        // Promise.race([p1, p2, p3]).then(result => {
+        //     console.log(result);
+        // }).catch(e => console.log(e));
+
+        //ES8
+        //avoid callback hell!
+        //async await
+        function printFullAddress(address) {
+            console.log(`My address is ${address.city} and ${address.street}`);
+        }
+
+        async function fetchUsers() {
+            const result = await fetch('https://jsonplaceholder.typicode.com/users/1');
+            const info = await result.json();
+            printFullAddress(info.address);
+        }
+
+        fetchUsers();
+
+
+    </script>
+</head>
+
+<body>
+    <p>open console</p>
+</body>
+
+</html>
