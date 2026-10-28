@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20</title>
+    <script>
+        // const err = new Error();
+        // const err = new Error("this is an error");
+        // const err = new Error("this is an error", { cause: "unexpected error" });
+        // const err = new RangeError("this is an error", { cause: "unexpected error" });
+        // const err = new RangeError();
+        // console.log(err);
+        // console.log(err.message);
+        // console.log(err.cause);
+        // //throw
+
+        // function checkValue(value) {
+        //     const cars = ["benz", "bmw", "mazda"];
+        //     if (!cars.includes(value)) {
+        //         throw new RangeError("the arguments is not valid...", { cause: "NOT_FOUND" });
+        //     }
+        //     throw new RangeError("the arguments exists", { cause: "FIND" });
+        //     // return value;
+        // }
+
+        // // checkValue("Ferrari");
+        // try {
+        //     checkValue("Ferrari");
+        // } catch (error) {
+        //     console.log(error.cause);
+        //     if (error.cause == "NOT_FOUND") {
+        //         console.log("not found");
+        //     } else {
+        //         console.log("else");
+        //     }
+        // } finally {
+        //     console.log("Finished");
+        // }
+
+        // const a =null;
+        // try{
+        //     const b = ali;
+        //     // a.f();
+        // } catch(error){
+        //     console.log(error.message);
+        //     console.log(error.name);
+        //     console.log(error.stack);
+        // }
+
+        class ValidationError extends Error {
+            constructor(message) {
+                super(message);
+                this.name = "ValidationError";
+            }
+        }
+
+        function test() {
+            throw new ValidationError("Whooops validation Error ... !");
+        }
+
+        try {
+            test();
+        } catch (error) {
+            console.log(error.message);
+            console.log(error.name);
+        }
+    </script>
+</head>
+
+<body>
+    <p>open console</p>
+</body>
+
+</html>
