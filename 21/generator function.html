@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21</title>
+    <script>
+        // function* generate() {
+        //     yield "ali";
+        //     return;
+        //     yield 2;
+        //     yield 3;
+        // }
+
+        // const g = generate();
+        // console.log(g.next());
+        // // console.log(g.return("reza"));
+        // console.log(g.next());
+        // console.log(g.next());
+
+        // function* generate() {
+        //     while (true) {
+        //         try {
+        //             yield "ali";
+        //         } catch (e) {
+        //             console.log(e);
+        //         }
+        //     }
+        // }
+        // const g = generate();
+        // // console.log(g.next());
+        // console.log(g.throw("Throw An Error"));
+
+        // function* getRandomPassword(max) {
+        //     while (true) {
+        //         const rand = Math.floor(Math.random() * max);
+        //         yield rand;
+        //     }
+        // }
+
+        // const g = getRandomPassword(1e12);
+        // console.log(g.next().value);
+        // console.log(g.next().value);
+        // console.log(g.next().value);
+
+        const list = [1, 2, 3, 4, 5, 6, 7, 8];
+
+        function* getPage(list, pageSize = 1) {
+            for (let index = 0; index < list.length; index += pageSize) {
+                yield list.slice(index, index + pageSize);
+            }
+        }
+
+        // const page = getPage(list, 3);
+        const page = getPage(list, 5);
+        console.log(page.next());
+        console.log(page.next());
+        console.log(page.next());
+        console.log(page.next());
+    </script>
+</head>
+
+<body>
+    <p>open console</p>
+</body>
+
+</html>
