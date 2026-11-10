@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22</title>
+    <script>
+        // // const players = new Set(["ali", "babak", "kaveh"]);
+        // // console.log(players);
+
+        // const players = new Set();
+        // players.add("ali");
+        // players.add("babak");
+        // players.add("haveh");
+        // players.add("haveh");
+        // players.add("ali");
+
+        // // // console.log(players);
+        // // console.log(players.size);
+        // // // console.log(players.has("ali"));
+        // // console.log(players.has("reza"));
+        // // players.delete("ali");
+        // // // console.log(players);
+        // // players.clear();
+        // // console.log(players);
+
+        // // for (const player of players) {
+        // //     console.log(player);
+        // // }
+
+        // // players.forEach(player => {
+        // //     console.log(player);
+        // // });
+
+        // // console.log(typeof players);
+        // // console.log(players instanceof Set);
+        // // console.log(players instanceof Array);
+        // console.log(players);
+
+        // const players = new Map([
+        //     ["ali", "15"],
+        //     ["reza", "20"],
+        //     ["babak", "18"]
+        // ]);
+
+        // console.log(players);
+
+        const players = new Map();
+        players.set("ali", "15");
+        players.set("reza", "16");
+        players.set("babak", "18");
+        players.set(true, "20");
+
+        // const obj = { true: 123 }; //can't be done like this in object's
+
+        // console.log(players);
+
+        // console.log(players.get("ali"));
+        // console.log(players.has("ali"));
+
+        // players.dalete("ali");
+
+        // console.log(players);
+        // players.clear();
+
+        players.forEach((value, key) => {
+            console.log(`${key} has ${value} years old`);
+        });
+        console.log(players.size);
+    </script>
+</head>
+
+<body>
+    <p>open console</p>
+</body>
+
+</html>
